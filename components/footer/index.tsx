@@ -2,19 +2,51 @@
 
 // @refresh reset
 import React from "react"
+import Link from "next/link"
+import FacebookIcon from "@mui/icons-material/Facebook"
+import InstagramIcon from "@mui/icons-material/Instagram"
+import TwitterIcon from "@mui/icons-material/Twitter"
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 p-4 text-white">
-      <div className="container mx-auto text-center">
-        <p>&copy; {new Date().getFullYear()} Your Company Name</p>
-        <p>
-          Made with{" "}
-          <span role="img" aria-label="heart">
-            ❤️
-          </span>{" "}
-          by Youte
-        </p>
+    <footer className="flex bg-gray-800 p-4 px-4 shadow dark:bg-gray-800">
+      <div className="mx-auto w-full max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+          &copy; {new Date().getFullYear()} Platzhalter
+        </span>
+        <ul className="mt-3 flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+            <a href="#" className="me-4 hover:underline md:me-6">
+              Über uns
+            </a>
+          </li>
+          <li>
+            <a href="#" className="me-4 hover:underline md:me-6">
+              Datenschutzrichtlinien
+            </a>
+          </li>
+          <li>
+            <a href="#" className="me-4 hover:underline md:me-6">
+              Impressum
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">
+              Kontakt
+            </a>
+          </li>
+        </ul>
+        <div className="flex justify-end space-x-2">
+          <Link href={"/"}>
+            <FacebookIcon className="hover:fill-facebook fill-grad h-8 w-8 hover:cursor-pointer" />
+          </Link>
+          <Link href={"/"}>
+            <InstagramIcon className="hover:fill-instagram h-8 w-8 hover:cursor-pointer" />
+          </Link>
+          <Link href={"/"}>
+            <TwitterIcon className="hover:fill-twitter h-8 w-8 hover:cursor-pointer" />
+          </Link>
+        </div>
       </div>
     </footer>
   )

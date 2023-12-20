@@ -1,0 +1,4 @@
+
+interface IHeader {
+    displayText: string,
+}
