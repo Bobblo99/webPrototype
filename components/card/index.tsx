@@ -1,33 +1,38 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+"use client"
+import Image from "next/image"
+import Link from "next/link"
 
-export default function MediaCard() {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-      className='hover:scale-105 transition-all duration-600 cursor-pointer hover:opacity-80'
-        sx={{ height: 300}}
-        image="/test.jpg"
-        title="green iguana"
-      />
-      {/* <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography paragraph>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent> */}
-      <CardActions className=' bg-navbarDark rounded-none'>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
+interface CardProps {
+  imageSrc: string
+  altText: string
+  title: string
+  description: string
 }
+
+const Card: React.FC<CardProps> = ({
+  imageSrc,
+  altText,
+  title,
+  description,
+}) => {
+  return (
+    <div className="mx-auto max-w-md overflow-hidden bg-white shadow-md  dark:bg-navbarDark">
+      <Link href={"/about"}>
+        <Image
+          src={"/test3.jpg"}
+          alt=""
+          width={500}
+          height={500}
+          className="h-48 w-full object-cover duration-500 hover:scale-105 hover:cursor-pointer hover:opacity-60"
+        />
+      </Link>
+      <div className="p-6">
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-teal-500 ">
+          {title}
+        </h2>
+        <p className="mt-2 text-gray-600 dark:text-gray-300">{description}</p>
+      </div>
+    </div>
+  )
+}
+export default Card
