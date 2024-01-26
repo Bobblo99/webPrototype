@@ -7,7 +7,7 @@ import Card from "../../components/card"
 import Carousel from "../../components/carousel"
 
 export default function Home() {
-  const images = ["/test3.jpg", "/test.jpg", "/test2.jpg", "/test3.jpg"]
+  const images = ["/test3.jpg", "/test.jpg", "/test2.jpg","/test4.jpg"]
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-white p-16 dark:bg-bgDark">
@@ -25,11 +25,19 @@ export default function Home() {
         /> */}
 
         <div className="flex flex-wrap">
-          {images.map((x: any, index: number) => (
-            <div key={index} className="w-full p-2 md:w-1/4">
-              <Card imageSrc={`${x}`} altText="" title="" description="sd" />
-            </div>
-          ))}
+          {images.map((x: any, index: number) => {
+            console.log(x, "index: ", index)
+            return (
+              <div key={index} className="w-full p-2 md:w-1/4">
+                <Card
+                  imageSrc={x} 
+                  altText=""
+                  title=""
+                  description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className="flex "></div>

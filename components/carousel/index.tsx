@@ -49,7 +49,7 @@ const Carousel = ({ images }: ICarousel) => {
           </div>
         ))} */}
         {images.map((image: any, index: any) => {
-          console.log(images)
+         // console.log(images)
           return(
             <div
               key={index}

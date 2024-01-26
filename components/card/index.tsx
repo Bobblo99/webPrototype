@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
     <div className="mx-auto max-w-md overflow-hidden bg-white shadow-md  dark:bg-navbarDark">
       <Link href={"/about"}>
         <Image
-          src={"/test3.jpg"}
+          src={imageSrc}
           alt=""
           width={500}
           height={500}
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
         <h2 className="text-xl font-semibold text-gray-800 dark:text-teal-500 ">
           {title}
         </h2>
-        <p className="mt-2 text-gray-600 dark:text-gray-300">{description}</p>
+        <p className="mt-2 text-black-600 dark:text-gray-300">{description}</p>
       </div>
     </div>
   )
