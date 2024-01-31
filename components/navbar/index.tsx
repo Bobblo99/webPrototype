@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
             Formenbau
           </Link>
           <Link
-            href="/services"
+            href="/location"
             className="py-2 hover:text-blue-400 dark:text-white  dark:hover:text-teal-400"
           >
             Standorte/Anfahrt
@@ -95,6 +95,12 @@ const Navbar: React.FC = () => {
             className="py-2 hover:text-blue-400 dark:text-white dark:hover:text-teal-400"
           >
             Kontakt
+          </Link>
+          <Link
+            href="/jobs"
+            className="py-2 hover:text-blue-400 dark:text-white dark:hover:text-teal-400"
+          >
+            Jobs
           </Link>
           <div className="py-1">
             <ThemeToggle />
